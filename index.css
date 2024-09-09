@@ -1,0 +1,41 @@
+
+p, h1, h2, h3 {
+    text-align: center;
+}
+
+
+.image-container {
+    text-align: center;
+}
+
+.center-image {
+    display: inline-block;
+    max-width: 40%; 
+    height: 300px; 
+    margin: 10px; 
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+    .counter button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .counter input {
+        width: 40px;
+        height: 30px;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        margin: 0 5px;
+    }

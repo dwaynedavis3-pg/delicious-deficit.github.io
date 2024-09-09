@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="store.css">
+    <title>Delicious Deficit - Store</title>
+</head>
+
+<body>
+
+    <!-- Menu Script -->
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            })
+            .catch(error => console.error('Error fetching menu:', error));
+    </script>
+
+    <!-- Navigation Bar -->
+    <nav class="home-logo">
+        <a href="index.html">
+            <img class="logo" src="photos/logo.png" alt="Delicious Deficit Logo" />
+        </a>
+    </nav>
+
+    <!-- Store Product Listings -->
+    <div class="container">
+        <!-- Product 1: Chicken Caesar Salad -->
+        <div class="product">
+            <img src="photos/caesar.png" alt="Chicken Caesar Salad">
+            <h3>Chicken Caesar Salad</h3>
+            <p class="price">$11.99</p>
+            <p>350 Calories</p>
+            <p>Chicken Caesar Salad with Croutons.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 2: Chicken Alfredo -->
+        <div class="product">
+            <img src="photos/alfredo.png" alt="Chicken Alfredo">
+            <h3>Chicken Alfredo</h3>
+            <p class="price">$13.99</p>
+            <p>750 Calories</p>
+            <p>Chicken Alfredo with Fat-Free Cheese and Whole Wheat Noodles.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 3: Beef and Rice Protein Bowl -->
+        <div class="product">
+            <img src="photos/beefbowl.png" alt="Beef and Rice Protein Bowl">
+            <h3>Beef and Rice Protein Bowl</h3>
+            <p class="price">$14.99</p>
+            <p>600 Calories</p>
+            <p>Grilled Beef, Rice, Lettuce, and Veggies.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 4: Grilled Chicken and Sweet Potato Fries -->
+        <div class="product">
+            <img src="photos/grilledchicken.png" alt="Grilled Chicken and Sweet Potato Fries">
+            <h3>Grilled Chicken and Sweet Potato Fries</h3>
+            <p class="price">$12.99</p>
+            <p>600 Calories</p>
+            <p>Cajun Grilled Chicken with Sweet Potato Fries.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 5: Salmon and Rice -->
+        <div class="product">
+            <img src="photos/salmon_rice.png" alt="Salmon and Rice">
+            <h3>Salmon and Rice</h3>
+            <p class="price">$15.99</p>
+            <p>650 Calories</p>
+            <p>Salmon and Riced Cauliflower.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 6: Salmon Tacos and Spanish Rice -->
+        <div class="product">
+            <img src="photos/fish_taco.png" alt="Salmon Tacos and Spanish Rice">
+            <h3>Salmon Tacos and Spanish Rice</h3>
+            <p class="price">$16.99</p>
+            <p>700 Calories</p>
+            <p>Salmon Tacos with Spanish Rice and Pico de Gallo.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 7: Red Curry Chicken Soup -->
+        <div class="product">
+            <img src="photos/curry.png" alt="Red Curry Chicken Soup">
+            <h3>Red Curry Chicken Soup</h3>
+            <p class="price">$11.99</p>
+            <p>400 Calories</p>
+            <p>Red Coconut Curry Soup with Chicken.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 8: French Onion Soup -->
+        <div class="product">
+            <img src="photos/onion_soup.png" alt="French Onion Soup">
+            <h3>French Onion Soup</h3>
+            <p class="price">$9.99</p>
+            <p>250 Calories</p>
+            <p>Classic French Onion Soup and Baguette.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+
+        <!-- Product 9: Lamb Chops and Riced Cauliflower -->
+        <div class="product">
+            <img src="photos/lamb.png" alt="Lamb Chops and Riced Cauliflower">
+            <h3>Lamb Chops and Riced Cauliflower</h3>
+            <p class="price">$18.99</p>
+            <p>500 Calories</p>
+            <p>Lamb Chops and Riced Cauliflower.</p>
+            <div class="counter">
+                <button class="decrease">-</button>
+                <input type="text" class="count" value="0" readonly>
+                <button class="increase">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Summary Section -->
+    <div id="cart-summary">
+        <h2>Cart Summary</h2>
+        <textarea id="cart-items" readonly></textarea>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+        let cart = {};
+        let total = 0;
+
+        function updateCart() {
+            let cartItems = document.getElementById('cart-items');
+            let cartTotal = document.getElementById('cart-total');
+
+            cartItems.value = Object.entries(cart).map(([name, { count, price }]) =>
+                `${name} x${count} ($${(price * count).toFixed(2)})`
+            ).join('\n');
+
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        document.querySelectorAll('.product').forEach(product => {
+            const decreaseBtn = product.querySelector('.decrease');
+            const increaseBtn = product.querySelector('.increase');
+            const countInput = product.querySelector('.count');
+            const name = product.querySelector('h3').textContent;
+            const price = parseFloat(product.querySelector('.price').textContent.replace('$', ''));
+
+            decreaseBtn.addEventListener('click', function () {
+                let count = parseInt(countInput.value);
+                if (count > 0) {
+                    count--;
+                    countInput.value = count;
+                    if (cart[name]) {
+                        cart[name].count = count;
+                        if (count === 0) {
+                            delete cart[name];
+                        }
+                        total -= price;
+                        updateCart();
+                    }
+                }
+            });
+
+            increaseBtn.addEventListener('click', function () {
+                let count = parseInt(countInput.value);
+                count++;
+                countInput.value = count;
+                if (cart[name]) {
+                    cart[name].count = count;
+                } else {
+                    cart[name] = { count: 1, price: price };
+                }
+                total += price;
+                updateCart();
+            });
+        });
+
+        document.getElementById('clear-cart').addEventListener('click', function () {
+            cart = {};
+            total = 0;
+            document.querySelectorAll('.count').forEach(input => {
+                input.value = 0;
+            });
+            updateCart();
+        });
+    </script>
+</body>
+
+</html>

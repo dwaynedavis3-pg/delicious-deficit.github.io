@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Delicious Deficit - Login</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="home-logo">
+        <a href="index.html">
+            <img class="logo" src="photos/logo.png" alt="Delicious Deficit Logo" />
+        </a>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>Delicious Deficit</h1>
+    </div>
+    <hr>
+
+    <!-- Container for Login Form -->
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm" action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <span id="usernameError" class="error" aria-live="assertive"></span><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error" aria-live="assertive"></span><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+
+    <!-- Menu Script -->
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            })
+            .catch(error => console.error('Error fetching menu:', error));
+    </script>
+
+    <!-- Form Validation Script -->
+    <script>
+        document.getElementById('username').addEventListener('blur', validateUsername);
+        document.getElementById('password').addEventListener('blur', validatePassword);
+        document.getElementById('loginForm').addEventListener('submit', validateForm);
+
+        function validateUsername() {
+            const username = document.getElementById('username').value;
+            const usernameError = document.getElementById('usernameError');
+            const usernamePattern = /^[A-Za-z0-9_]{3,20}$/; // Only alphanumeric and underscores
+
+            if (!usernamePattern.test(username)) {
+                usernameError.textContent = 'Username must be 3-20 characters, and only contain letters, numbers, and underscores.';
+                return false;
+            } else {
+                usernameError.textContent = '';
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/; // Strong password pattern
+
+            if (!passwordPattern.test(password)) {
+                passwordError.textContent = 'Password must be at least 8 characters long, with an uppercase letter, a number, and a special character.';
+                return false;
+            } else {
+                passwordError.textContent = '';
+                return true;
+            }
+        }
+
+        function validateForm(event) {
+            const isUsernameValid = validateUsername();
+            const isPasswordValid = validatePassword();
+
+            if (!isUsernameValid || !isPasswordValid) {
+                event.preventDefault();
+                alert('Please correct the errors in the form before submitting.');
+            } else {
+                // If you want to redirect to index.html after validation
+                event.preventDefault(); // Prevent the default form submission
+                window.location.href = 'index.html'; // Redirect to index.html
+            }
+        }
+    </script>
+
+</body>
+
+</html>

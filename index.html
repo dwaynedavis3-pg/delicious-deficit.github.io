@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Delicious Deficit - Home</title>
+</head>
+
+<body>
+
+    <!-- Menu Script -->
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            })
+            .catch(error => console.error('Error fetching menu:', error));
+    </script>
+
+    <!-- Navigation Bar -->
+    <nav class="home-logo">
+        <a href="index.html">
+            <img class="logo" src="photos/logo.png" alt="Delicious Deficit Logo" />
+        </a>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>Delicious Deficit</h1>
+    </div>
+    <hr>
+
+    <!-- Main Content Container -->
+    <div class="homeContainer">
+
+        <!-- Mission Statement Section -->
+        <h2>Our Mission</h2>
+        <p class="centered-paragraph">
+            At Delicious Deficit, our mission is to make healthy living accessible and convenient for everyone.
+            We are committed to providing nutritious, pre-made meals that cater to the needs of busy individuals
+            who prioritize their health but may not have the time to cook. Through our offerings, we strive to
+            empower our customers to lead healthier lives, regardless of their schedules, by making wholesome,
+            delicious food available at their fingertips.
+        </p>
+        <hr>
+
+        <!-- Shop Highlight Section -->
+        <h3>Healthy Selection</h3>
+        <p class="centered-paragraph">
+            If you are in the mood for a fresh Caesar salad, perfectly cooked lamb, or grilled chicken with sweet potato fries, then head
+            over to our store.
+        </p>
+        <div class="image-container">
+            <a href="store.html"><img src="photos/caesar.png" class="center-image" alt="Caesar Salad"></a>
+            <a href="store.html"><img src="photos/lamb.png" class="center-image" alt="Lamb Chops" /></a>
+            <a href="store.html"><img src="photos/grilledchicken.png" class="center-image" alt="Grilled Chicken" /></a>
+        </div>
+        <hr>
+
+        <!-- Goals and Objectives Section -->
+        <h2>Our Goals & Objectives</h2>
+        <ul class="centered-paragraph">
+            <li><strong>Promote a Healthy Lifestyle:</strong> Encourage and support a healthy lifestyle for all, offering convenient meal solutions that align with the nutritional needs and busy schedules of our customers.</li>
+            <li><strong>Provide Accessible Healthy Meals:</strong> Make nutritious, pre-made meals available to everyone, including those with limited time or cooking skills. Our meals are designed to be both delicious and balanced.</li>
+            <li><strong>Support the Community with Free Resources:</strong> Offer a free recipe book filled with healthy meal ideas for those who may not have the resources to purchase our pre-made meals, ensuring everyone has access to tools for maintaining a healthy diet.</li>
+            <li><strong>Sustainability and Quality:</strong> Use high-quality, sustainably sourced ingredients in all our meals. Our objective is to nourish our customers while respecting and preserving the environment.</li>
+            <li><strong>Expand Reach and Accessibility:</strong> Expand our reach to make our healthy meal options accessible to more people across different regions, with the convenience of delivery.</li>
+            <li><strong>Foster a Community of Health Enthusiasts:</strong> Build and nurture a community of like-minded individuals passionate about health and wellness, offering a platform for sharing tips, recipes, and stories.</li>
+        </ul>
+        <hr>
+
+        <!-- Recipe Highlights Section -->
+        <h3>Recipe Highlights</h3>
+        <div class="image-container">
+            <a href="recipes.html#frittata"><img src="photos/frittata.png" class="center-image" alt="Frittata"></a>
+            <a href="recipes.html#salmon"><img src="photos/salmon.png" class="center-image" alt="Salmon"></a>
+            <a href="recipes.html#lentils"><img src="photos/lentils.png" class="center-image" alt="Lentil Soup"></a>
+        </div>
+        <hr>
+
+    </div>
+</body>
+
+</html>
